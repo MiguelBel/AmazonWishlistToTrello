@@ -1,0 +1,2 @@
+/Users/miguelbeltran/Documents/Learning/Elixir/AmazonWhishlistToTrello/_build/dev/lib/AmazonWishlistToTrello/ebin/Elixir.AmazonWishlist.beam	Elixir.AmazonWishlist	lib/amazon_wishlist.ex	Elixir.Enum	Elixir.Floki	Elixir.HTTPoison	Elixir.Kernel	Elixir.List	Elixir.Regex	erlang	Elixir
+_build/dev/lib/AmazonWishlistToTrello/ebin/Elixir.EmailToTrello.beam	Elixir.EmailToTrello	lib/email_to_trello.ex	Elixir.Access	Elixir.Base	Elixir.Enum	Elixir.Exredis	Elixir.HTTPoison	Elixir.Kernel	Elixir.Logger	Elixir.String.Chars	Elixir.System	erlang	Elixir
