@@ -40,3 +40,36 @@ The environment variables that you have to provide are:
 - FROM_EMAIL: A valid postmark from email, take a look in Postmark.
 
 - REDIS_URL: For the Redis config. Provided by Heroku
+
+## Development
+
+Setup:
+
+```
+git@github.com:MiguelBel/AmazonWishlistToTrello.git
+cd AmazonWishlistToTrello/
+mix deps.get
+```
+
+You can execute the task with:
+
+`WISHLIST_URL=your_wl_url TRELLO_EMAIL=your_trello_email TRELLO_LABEL=your_trello_label POSTMARK_API_KEY=your_postmark_ak FROM_EMAIL=your_from_email mix run synchronize.ex`
+
+### Deploy
+
+Heroku is the easiest way of host the service for free.
+
+```
+heroku create
+git push heroku master
+heroku config:set WISHLIST_URL=your_wl_url TRELLO_EMAIL=your_trello_email TRELLO_LABEL=your_trello_label POSTMARK_API_KEY=your_postmark_ak FROM_EMAIL=your_from_email
+heroku addons:create heroku-redis:hobby-dev # Adds the heroku addon, it is already configured
+heroku addons:create scheduler:standard # Adds the scheduler
+heroku addons:open scheduler
+```
+
+nd then it will open a webpage where you have to set the job and the frequency. You call to the job with the command `mix run synchornize.ex`
+
+The final result should look like:
+
+![GH](https://cloud.githubusercontent.com/assets/1566116/12868452/a4e8ca3c-cd07-11e5-9c77-4c4603e2bf4b.png)
