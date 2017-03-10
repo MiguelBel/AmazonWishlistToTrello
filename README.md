@@ -61,6 +61,7 @@ Heroku is the easiest way of host the service for free.
 
 ```
 heroku create
+heroku buildpacks:set https://github.com/HashNuke/heroku-buildpack-elixir # Allows to execute Elixir in heroku
 git push heroku master
 heroku config:set WISHLIST_URL=your_wl_url TRELLO_EMAIL=your_trello_email TRELLO_LABEL=your_trello_label POSTMARK_API_KEY=your_postmark_ak FROM_EMAIL=your_from_email
 heroku addons:create heroku-redis:hobby-dev # Adds the heroku addon, it is already configured
