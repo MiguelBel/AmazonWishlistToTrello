@@ -69,7 +69,7 @@ heroku addons:create scheduler:standard # Adds the scheduler
 heroku addons:open scheduler
 ```
 
-nd then it will open a webpage where you have to set the job and the frequency. You call to the job with the command `mix run synchornize.ex`
+nd then it will open a webpage where you have to set the job and the frequency. You call to the job with the command `mix run synchronize.ex`
 
 The final result should look like:
 
