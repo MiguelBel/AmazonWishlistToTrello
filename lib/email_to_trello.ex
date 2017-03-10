@@ -36,7 +36,7 @@ defmodule EmailToTrello do
       }",
       [
         {"Accept", "application/json"},
-        {"X-Postmark-Server-Token", "99744da6-7e4e-40e5-9eda-7e0550a6eb7b"},
+        {"X-Postmark-Server-Token", System.get_env("POSTMARK_API_KEY")},
         {"Content-Type", "application/json"}
       ]
     )
